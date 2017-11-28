@@ -6,22 +6,9 @@ using Newtonsoft.Json;
 
 namespace Characterizer
 {
-    class Program
+    public class Program
     {
         private static int[] Tolerances = new int[] {-1, 0, 1};
-
-        class Data
-        {
-            public int quality { get; set; }
-            public int sellIn { get; set; }
-        }
-
-        class Record
-        {
-            public Data input { get; set; }
-            public Data output { get; set; }
-            public string name { get; set; }
-        }
 
         static void Main(string[] args)
         {
@@ -71,7 +58,7 @@ namespace Characterizer
                 }
             }
 
-            File.WriteAllText(@"..\..\behavior.json", JsonConvert.SerializeObject(results));
+            File.WriteAllText(@"..\..\..\GildedRoseLibraryTests\characterize\behavior.json", JsonConvert.SerializeObject(results));
         }
     }
 }
